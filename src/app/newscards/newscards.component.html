@@ -1,0 +1,25 @@
+<div class="container">
+
+    <div *ngFor="let item of news_list">
+
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">
+                    {{item.headline}}
+                </h5>
+                <h6 class="card-subtitle mb-2 text-muted">
+                    التاريخ :{{item.dateline}}
+                </h6>
+                <p class="card-text">
+                   {{text_splitting(item.text)}}......
+                   <span class="badge badge-info" >
+                    <a [href]=item.url  target="_blank"  style="text-decoration: none;">للمتابعة</a>
+                </span>
+                </p>
+               
+                
+            </div>
+        </div>
+    </div>
+
+</div>

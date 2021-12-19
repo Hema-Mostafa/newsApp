@@ -1,0 +1,33 @@
+.navbar{
+    height: 75px;
+    background-color: #FFF !important;
+    box-shadow: 0px -5px 10px;
+    direction: rtl;
+}
+
+.logo-section{
+    margin: 0 5px 0 5px;
+    
+}
+
+.logo-link{
+    margin-right: 5px;
+    padding: 2px;
+}
+
+.search-section{
+    position:relative;
+}
+.icon-absolute{
+position: absolute;
+ top: 20%;
+ left: 5%;   
+}
+.form-control{
+    box-shadow: 0 2px 5pt -0.5pt    #d3d3d3;
+    border: 1px solid #DDD;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+/* mat Option direction */

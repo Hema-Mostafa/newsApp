@@ -1,0 +1,17 @@
+.figure{
+    text-align: center;
+
+}
+.figure img{
+    width: 60%;
+    height: 75%;
+    object-fit: cover;
+    object-position: 50% 50%;
+
+}
+
+.headline-disc{
+    font-size: 15px;
+    font-family:ui-monospace;
+    word-spacing: 2px;
+}

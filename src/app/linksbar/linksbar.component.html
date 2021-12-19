@@ -1,0 +1,7 @@
+<ul class="list-group list-group-flush">
+    <li class="list-group-item " *ngFor="let _new of random_news">
+        <a [href]=_new.url  target="_blank" class="list-group-item-action link-decoration">
+            {{_new.headline}}
+        </a>
+    </li>
+</ul>
