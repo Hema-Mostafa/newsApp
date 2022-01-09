@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { LinksService } from '../links.service';
 import { NewShape } from '../models/newshape';
+import { NewsService } from '../news.service';
 
 @Component({
   selector: 'app-linksbar',
@@ -12,7 +12,7 @@ export class LinksbarComponent implements OnInit {
   news !: any[]
   random_news !: NewShape[]
 
-  constructor(private linksService: LinksService) { }
+  constructor(private linksService: NewsService) { }
 
   ngOnInit(): void {
 

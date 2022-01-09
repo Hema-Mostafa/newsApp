@@ -5,15 +5,15 @@
         <div class="card" style="width: 18rem;">
             <div class="card-body">
                 <h5 class="card-title">
-                    {{item.headline}}
+                    {{item.headline[0]}}
                 </h5>
                 <h6 class="card-subtitle mb-2 text-muted">
-                    التاريخ :{{item.dateline}}
+                    التاريخ :{{item.dateline[0]}}
                 </h6>
                 <p class="card-text">
-                   {{text_splitting(item.text)}}......
+                   {{text_splitting(item.text[0])}}......
                    <span class="badge badge-info" >
-                    <a [href]=item.url  target="_blank"  style="text-decoration: none;">للمتابعة</a>
+                    <a [href]=item.url[0]  target="_blank"  style="text-decoration: none;">للمتابعة</a>
                 </span>
                 </p>
                

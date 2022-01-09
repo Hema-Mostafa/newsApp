@@ -14,10 +14,12 @@ export class NewscardsComponent implements OnInit {
   // @Input() sub_news_text !: string
 
 
-  sub_news_text !: string
+  searching_text !: string |null
   news_list !: NewShape[]
   url_endpoint = "assets/news_sample.json"
-
+  base_url = "http://localhost:8983/solr/arabic/select?indent=true&q.op=OR&q=text%3A"
+  
+  
   constructor(private linksService: LinksService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
@@ -25,13 +27,23 @@ export class NewscardsComponent implements OnInit {
     this.route.paramMap
       .subscribe(params => {
         // this.sub_news_text = params['text'];
-        console.log("params");
-        console.log(params.get("text"));
-        this.linksService.get_news(this.url_endpoint)
-          .subscribe(res => {
+        if (params.get("text")){
+          this.searching_text =params.get("text") 
+        }
+        else{
+          this.searching_text =""
 
-            this.news_list = res.slice(0, 5) // This line Will be modified , simulate the search result return only five news
-            console.log(this.news_list);
+        }
+        
+        this.linksService.get_news(this.base_url + this.searching_text)
+          .subscribe(res => {
+            console.log(this.base_url);
+            
+            console.log(res['response'])
+            console.log(res['responseHeader'])  
+            
+            this.news_list = res['response'].docs.slice(0, 5) // This line Will be modified , simulate the search result return only five news
+            console.log(this.news_list[0].url[0]);
 
           }, err => {
             console.log(err);

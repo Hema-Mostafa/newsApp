@@ -14,8 +14,8 @@ export class NavbarComponent implements OnInit {
   })
 
   // For SVG  Width and Heigth
-  svgWidth = "30px";
-  svgHeigth = "30px";
+  svgWidth = "25px";
+  svgHeigth = "25px";
 
   url = "http://localhost:8000/predict"
   options: string[] = []
@@ -58,19 +58,12 @@ export class NavbarComponent implements OnInit {
   }
 
 
-  optionSelcted(input_Element: string,optionSelcted :string){
+  optionSelcted(input_Element:HTMLInputElement ,optionSelcted :string){
 
     console.log("Option optionSelcted" , optionSelcted);
+    input_Element.value  = input_Element.value + optionSelcted
+    this.options  = []
 
-    // input_Element.value = input_Element.value + optionSelcted
-    console.log(input_Element);
-
-    console.log(optionSelcted);
-
-  }
-
-  display(obj : any){
-    return obj + "ssssssssss"
   }
 
 }

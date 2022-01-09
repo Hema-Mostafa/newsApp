@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { LinksService } from '../links.service';
 import { NewShape } from '../models/newshape';
+import { NewsService } from '../news.service';
 
 @Component({
   selector: 'app-newsinfo',
@@ -11,15 +11,16 @@ export class NewsinfoComponent implements OnInit {
 
   image_src = "../../assets/"
   sub_text = ""
+  show = null
 
   random_item !: NewShape
   news_list !: NewShape[]
 
-  constructor(private linksService: LinksService) { }
+  constructor(private newsService: NewsService) { }
 
   ngOnInit(): void {
 
-    this.linksService.get_news("assets/mini_smaple_news.json")
+    this.newsService.get_news("assets/mini_smaple_news.json")
       .subscribe(res=>{
 
         this.news_list = res

@@ -31,3 +31,25 @@ position: absolute;
 }
 
 /* mat Option direction */
+.condicates-container{
+    position: relative;
+}
+
+.condicates-container ul{
+    position: absolute;
+    width: 100%;
+}
+.condicates-container ul li {
+    width: 95%;
+    background: #f9f9f9;
+    direction: rtl;
+    border: none;
+    opacity: .9;
+    z-index: 100;
+}
+.list-group-item :hover {
+    
+    background: #f2f2f2 !important;
+    cursor: pointer !important;
+    font-size: 50px;
+}
