@@ -17,7 +17,9 @@ export class NavbarComponent implements OnInit {
   svgWidth = "25px";
   svgHeigth = "25px";
 
-  url = "http://localhost:8000/predict"
+  // url = "http://localhost:8000/predict"
+  url = "http://52.224.19.57:8000/predict"
+
   options: string[] = []
 
   constructor(private autocompleteService: AutocompleteService,

@@ -11,7 +11,7 @@ export class AutocompleteService {
   public predict_next_words(url:string , text_value : string){
     let obj =  {
       "text": text_value,
-      "condidate": 4
+      "candidate": 5
     }
     const options = { headers: new HttpHeaders({ 'Content-Type': 'application/json' }) };
     const body = JSON.stringify(obj);
