@@ -17,12 +17,10 @@ export class NewscardsComponent implements OnInit {
   searching_text !: string |null
   news_list !: NewShape[]
   url_endpoint = "assets/news_sample.json"
-  base_url = "http://104.43.202.170/solr/#/news/query?indent=true&q.op=OR&q=text%3A"
-  // base_url = "http://localhost:8983/solr/arabic/select?indent=true&q.op=OR&q=text%3A"
+  // base_url = "http://104.43.202.170/solr/#/news/query?indent=true&q.op=OR&q=text%3A"
+  base_url = "http://localhost:8983/solr/arabic/select?indent=true&q.op=OR&q=text%3A"
 
-  // http://104.43.202.170/solr/#/news/query
-  
-  
+   
   constructor(private linksService: LinksService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
